@@ -1,8 +1,11 @@
 module sevensmt(bcd,seg);
-input [3:0] bcd;    
+input [3:0] bcd; 
+input [3:0] digit;
 output[7:0] seg;    
 reg [7:0] seg;      
-     
+ 
+assign digit = 4'b1111;
+
 always @ (bcd)      
 begin
 case(bcd)   
