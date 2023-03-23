@@ -2,6 +2,7 @@ module sevensmttb;
 
 	// Inputs
 	reg [3:0] bcd;
+	reg [3:0] digit;
 
 	// Outputs
 	wire [7:0] seg;
@@ -9,7 +10,8 @@ module sevensmttb;
 	// Instantiate the Unit Under Test (UUT)
 	sevensmt uut (
 		.bcd(bcd), 
-		.seg(seg)
+		.seg(seg),
+		.digit(digit)
 	);
 
 	initial begin
