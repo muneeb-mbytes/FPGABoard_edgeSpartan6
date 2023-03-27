@@ -1,0 +1,3 @@
+NET "y" LOC = p33;
+NET "a" LOC = p22; 
+NET "b" LOC = p21;
