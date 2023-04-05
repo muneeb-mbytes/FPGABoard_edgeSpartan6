@@ -1,4 +1,4 @@
-module sevensmt(bcd,seg);
+module sevensmt(bcd,digit,seg);
 input [3:0] bcd; 
 input [3:0] digit;
 output[7:0] seg;    
