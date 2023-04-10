@@ -1,5 +1,0 @@
-NET "a" LOC=P22;
-NET "b" LOC=P21;
-NET "cin" LOC=P17;
-NET "sum" LOC=P33;
-NET "cout" LOC=P32;
