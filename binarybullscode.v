@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-
+//
 module pushbutton_debouncer (
   input pb,
 input clk,  // input pushbutton signal
