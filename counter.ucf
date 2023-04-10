@@ -1,0 +1,19 @@
+#slide switches
+NET "stop" LOC = P22;
+NET "start" LOC = P21;
+NET "reset" LOC = P17;
+NET "load" LOC = P16;
+
+#led
+NET "Count[0]" LOC = p33; #LSB
+NET "Count[1]" LOC = p32;
+NET "Count[2]" LOC = p30;
+NET "Count[3]" LOC = p29;
+NET "Count[4]" LOC = p27;
+NET "Count[5]" LOC = p26;
+NET "Count[6]" LOC = p24;
+
+#Slide Switches
+NET "UpOrDown" LOC = p22; #LSB
+
+NET "Clk" LOC = p84;
