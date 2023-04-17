@@ -1,25 +1,26 @@
-module debounce_ckt(
+module debouncer(
 input button,
 input clk,
+input reset,
 output result
     );
 
 /************************************* Internal Variables **********************************/    
-wire result=1'b0;
+//wire result;
 wire Q1;
 wire Q2;
-wire EN1 = 1'd1;
-wire EN2 = 1'd1;
+wire EN1;
+wire EN2;
 wire xor_out;
 /****************************** Debounce ckt Implementation code ****************************************/
 
-DFF FF1 (button,clk,EN1,Q1);
-DFF FF2 (Q1,clk,EN2,Q2);
+DFF FF1 (button,clk,reset,1'b1,Q1);
+DFF FF2 (Q1,clk,reset, 1'b1,Q2);
      
 xor g1 (xor_out,Q1,Q2);
 
 counter C1 (clk,xor_out,~c,c);     
-DFF FF3 (Q2,clk,c,result);
+DFF FF3 (Q2,clk,reset, c,result);
 
 endmodule
 
@@ -33,7 +34,7 @@ endmodule
      output reg c; 
          
 
-parameter N = 19;
+parameter N = 5;
 
             always@(posedge clk)
                     if(SCLR) 
@@ -59,10 +60,15 @@ endmodule
  
 // D Flip Flop Module (with Enable)
 
-module DFF(input D,input clk,input EN ,output Q);
+module DFF(input D,input clk, input reset, input EN ,output Q);
 reg temp;
-            always @(posedge clk ) 
+            always @(posedge clk) 
                     begin
+                      if(reset) begin
+                        temp <=0;
+                        $monitor($time,"Inside reset temp = %0d", temp);
+                      end
+                      else begin
                         if(EN)
                                 begin
                                    temp <= D; 
@@ -70,6 +76,8 @@ reg temp;
 										  else
 										  temp<=temp;
                     end  
+                        $monitor($time,"Inside temp = %0d", temp);
+                  end
 assign 	Q=temp;					  
 endmodule
 
