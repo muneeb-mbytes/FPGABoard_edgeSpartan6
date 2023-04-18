@@ -20,7 +20,7 @@ DFF FF2 (Q1,clk,reset, 1'b1,Q2);
 xor g1 (xor_out,Q1,Q2);
 
 counter C1 (clk,xor_out,~c,c);     
-DFF FF3 (Q2,clk,~c, c,result);
+	DFF FF3 (Q2,clk,reset, c,result);
 
 endmodule
 
