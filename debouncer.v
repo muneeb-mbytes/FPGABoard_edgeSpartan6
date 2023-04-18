@@ -66,7 +66,7 @@ reg temp;
                     begin
                       if(reset) begin
                         temp <=0;
-                        $monitor($time,"Inside reset temp = %0d", temp);
+                       // $monitor($time,"Inside reset temp = %0d", temp);
                       end
                       else begin
                         if(EN)
@@ -76,7 +76,7 @@ reg temp;
 										  else
 										  temp<=temp;
                     end  
-                        $monitor($time,"Inside temp = %0d", temp);
+                      //  $monitor($time,"Inside temp = %0d", temp);
                   end
 assign 	Q=temp;					  
 endmodule
