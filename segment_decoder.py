@@ -21,11 +21,10 @@ def segdecoder(n):
         return "00001001"
     
 
-f= open('file.txt','a')
+f= open('srgdecoder.txt','a')
 start=int(input("Enter start value :"))
 end = int ( input ("Enter end value :"))
 digits=len(str(end))
-# power=digits-1;
 
 for i in range (start,end+1):
     I=str(i)
@@ -34,5 +33,6 @@ for i in range (start,end+1):
     for j in range(digits,0,-1):
         value=i//(10**(digits-1))
         f.write(segdecoder(value))
+        f.write("_")
     f.write("\n")
 f.close()
