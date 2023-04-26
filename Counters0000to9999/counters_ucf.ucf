@@ -1,0 +1,39 @@
+NET "seg[0]" LOC = P134;
+
+NET "seg[1]" LOC = P137;
+
+NET "seg[2]" LOC = P138;
+
+NET "seg[3]" LOC = P139;
+
+NET "seg[4]" LOC = P140;
+
+NET "seg[5]" LOC = P141;
+
+NET "seg[6]" LOC = P142;
+
+NET "seg[7]" LOC = P143;
+
+NET "digit[0]" LOC = P127;
+
+NET "digit[1]" LOC = P131;
+
+NET "digit[2]" LOC = P132;
+
+NET "digit[3]" LOC = P133;
+
+NET "clk_50MHz" LOC = p84;
+
+NET "reset_button" LOC = P40;
+
+//NET "reset" LOC = p40;
+
+NET "updown" LOC = p17;
+
+NET "load" LOC = P44;
+
+NET "start" LOC = p45;
+
+NET "stop" LOC = P41;
+
+NET "buzzer" LOC = p85;
