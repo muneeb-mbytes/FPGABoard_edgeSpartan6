@@ -30,9 +30,12 @@ for i in range (start,end+1):
     I=str(i)
     f.write(I)
     f.write(" : ")
+    k=i
     for j in range(digits,0,-1):
-        value=i//(10**(digits-1))
+        value=k//(10**(digits-1))
+        k=k%10
         f.write(segdecoder(value))
         f.write("_")
+        
     f.write("\n")
 f.close()
