@@ -1,0 +1,7 @@
+NET "pushbuz" LOC = P45;
+NET "Err" LOC = P44;
+NET "on" LOC = P43;
+NET "off" LOC = P41;
+NET "open" LOC = P40;
+NET "buz" LOC = p85;
+NET "clk_50Mhz" LOC = p84;
