@@ -1,0 +1,61 @@
+#Clock
+NET "clk" LOC = p84;
+#Push Buttons
+
+
+NET "on" LOC = P45;
+
+
+NET "err" LOC = P44;
+
+
+NET "buzzer" LOC=P43;
+
+
+NET "off" LOC = P41;
+
+
+NET "open" LOC = P40;
+
+
+#Seven Segment Display
+
+
+NET "digit[0]" LOC = P127;
+
+
+NET "digit[1]" LOC = P131;
+
+
+NET "digit[2]" LOC = P132;
+
+
+NET "digit[3]" LOC = P133;
+
+
+NET "segment[0]" LOC = P134;
+
+
+NET "segment[1]" LOC = P137;
+
+
+NET "segment[2]" LOC = P138;
+
+
+NET "segment[3]" LOC = P139;
+
+
+NET "segment[4]" LOC = P140;
+
+
+NET "segment[5]" LOC = P141;
+
+
+NET "segment[6]" LOC = P142;
+
+
+NET "segment[7]" LOC = P143;
+
+#Buzzer
+NET "buzzer" LOC = p85;
+
