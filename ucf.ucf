@@ -1,36 +1,7 @@
+NET "freq1" LOC = P45;
+NET "freq2" LOC = P44;
+NET "freq3" LOC = P43;
+NET "freq4" LOC = P41;
 
-
-#50 MHz oscillator
-NET "clk_50M"       LOC = "p84";
-NET "clk_50M"       TNM_NET = "osc";
-TIMESPEC "TS_osc" = PERIOD "osc" 20.000ns;
-
-
-
-
-//switch
-NET "ud<0>" LOC = p22;
-
-
-//push buttons
-NET "stop[3]" LOC = P44;
-NET "start[2]" LOC = P43;
-NET "load[1]" LOC = P41;
-NET "reset[0]" LOC = P40;
-
-
-//seven segment
-#Seven Segment Display sharing I/O with LED
-NET "digit[0]" LOC = P127;
-NET "digit[1]" LOC = P131;
-
-NET "anode[0]" LOC = P134;
-NET "anode[1]" LOC = P137;
-NET "anode[2]" LOC = P138;
-NET "anode[3]" LOC = P139;
-NET "anode[4]" LOC = P140;
-NET "anode[5]" LOC = P141;
-NET "anode[6]" LOC = P142;
-NET "anode[7]" LOC = P143;
-
-NET "rollover" LOC = p85;
+NET "CLK_50MHz"       LOC = "p84";
+NET "buzzer" LOC = p85;

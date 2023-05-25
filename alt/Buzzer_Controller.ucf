@@ -1,0 +1,4 @@
+NET "button" LOC = P45;
+
+NET "clk" LOC = p84;
+NET "buzzer_out" LOC = p85;
