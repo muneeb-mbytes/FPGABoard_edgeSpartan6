@@ -1,0 +1,8 @@
+NET "clk_50MHz"  LOC = "p84"; //50Mhz 
+
+NET "a" LOC = P45;   //push buttons
+NET "b" LOC = P44;
+NET "c" LOC = P43;
+NET "d" LOC = P41;
+
+NET "buzzout" LOC = p85; //buzzzer out
