@@ -1,0 +1,96 @@
+module buzz(input clk_50MHz,          //Inbuilt clock of Edge Spartan 6
+     
+    input note4,
+	 input note1,
+	 input note2,
+	 input note3,
+	 
+    	           //mode control
+	 output reg buzzer);
+	 wire [1:0] w_state;
+	 parameter clkdiv1= 50000000/440/2;
+	 parameter clkdiv2= 50000000/261/2;
+	 parameter clkdiv3= 50000000/349/2;
+    parameter clkdiv4= 50000000/523/2;
+	 
+	 
+	 reg [31:0]counter;
+	  always @ (posedge clk_50MHz) begin
+	  
+	   case(w_state)
+      00: begin
+		buzzer <=1'b0;
+      
+		if(counter==0) 
+		begin counter <= clkdiv1-1;
+	   buzzer <=~buzzer;
+		end
+		else counter <= counter-1;
+	   end
+		
+		01: begin
+     
+		buzzer <=1'b0;
+    
+		if(counter==0) 
+		begin counter <= clkdiv2-1;
+	   buzzer <=~buzzer;
+		end
+		else counter <= counter-1;
+	   end
+	 
+	   10: begin
+     buzzer <=1'b0;
+		
+		if(counter==0) 
+		begin counter <= clkdiv3-1;
+	   buzzer <=~buzzer;
+		end
+		else counter <= counter-1;
+	   end
+		
+	   11: begin
+      
+		buzzer <=1'b0;
+    
+		if(counter==0) 
+		begin counter <= clkdiv4-1;
+	   buzzer <=~buzzer;
+		end
+		else counter <= counter-1;
+	   end
+		
+	 endcase
+	 
+
+end
+
+statedetect( .note1(note1), .note2(note2), .note3(note3), .note4(note4), .clk_50MHz(clk_50MHz),.state( w_state));
+
+
+endmodule
+
+
+
+
+	
+module statedetect(input note1,input note2,input note3,input note4,input clk_50MHz, output  reg [1:0] state);
+
+ //input buttons after passing through debouncer circuit
+ 
+
+always@(posedge clk_50MHz)
+begin
+if(note1)
+   state=2'b00;
+else if (note2)
+	state=2'b01;
+	
+else if (note3)
+	state=2'b10;
+else if (note4)
+	state=2'b11;
+end
+
+endmodule 
+
