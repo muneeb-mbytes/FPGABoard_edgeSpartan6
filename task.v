@@ -7,7 +7,7 @@ wire clk_1,clk2,clk3,clk4;
 input a,b,c,d;
 output reg buzzout;
 output reg state_detect;
-always@*
+	always@(posedge clk_50MHz)
 begin
 if (a)
 state_detect<=2'b00;
@@ -22,22 +22,13 @@ oneHz_gen hz1(.clk_50MHz(clk_50MHz), .reset_button(reset_button), .clk_1Hz(clk_1
 five rt(.clk_50MHz(clk_50MHz), .reset_button(reset_button), .clk_five(clk2));
 three gh(.clk_50MHz(clk_50MHz), .reset_button(reset_button), .clk_three(clk3));
 four z1(.clk_50MHz(clk_50MHz), .reset_button(reset_button), .clk_four(clk4));
-always@(posedge clk_1)
-begin
-buzzout<=a;
-end
-always@(posedge clk2)
-begin
-buzzout<=b;
-end
-always@(posedge clk3)
-begin
-buzzout<=c;
-end
-always@(posedge clk4)
-begin
-buzzout<=d;
-end
+always@(posedge clk_50MHz)
+case(state_detect)
+2'b00:buzzout=clk_1;
+2'b01:buzzout=clk2;
+2'b10: buzzout=clk3;
+2'b11:buzzout=clk4;
+endcase
 endmodule
 
 
