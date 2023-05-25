@@ -32,7 +32,7 @@ module clk_277_18Hzgen(
             clk_out_reg <= 0;
         end
  else
-            if(ctr_reg == 95554) begin  // 50MHz / 1Hz / 2 = 25,000,000
+     if(ctr_reg == 90194) begin  // 50MHz / 1Hz / 2 = 25,000,000
                 ctr_reg <= 0;
                 clk_out_reg <= ~clk_out_reg;
             end
