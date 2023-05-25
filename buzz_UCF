@@ -2,7 +2,7 @@ NET "note1" LOC = P45;
 NET "note2" LOC = P44;
 
 NET "note4" LOC = P41;
-NET "note3" LOC = P42;
+NET "note3" LOC = P40;
 
 NET "clk_50MHz" LOC = p84;
 
