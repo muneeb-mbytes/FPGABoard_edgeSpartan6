@@ -9,6 +9,7 @@ Explaination on each module
    Then shifted one bit, and shift in proper bit from input end
    
 2) counters_ucf.ucf
+   
    In this file each pin which is assigned to input and outputs are mentioned
    
 3) 
