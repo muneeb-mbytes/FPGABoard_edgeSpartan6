@@ -1,6 +1,6 @@
 Counting 0000 TO 9999 using FPGA
 
-Explaination on each module
+Explaination on each file
 
 1) bintobcd.v
    It is Binary to BCD(BInary Coded Decimal) conversion
