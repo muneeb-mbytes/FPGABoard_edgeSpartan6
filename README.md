@@ -48,14 +48,14 @@ then digit_timer will be 0 as it is already at max state and digit_select will b
 =>Logic for driving the 4 bit anode output based on digit select
 A case statement which turns on the required digit based on the digit_select.
 
-=> Logic for driving segments based on which digit is selected and the value of each digit
-Here case(digit_select) 
-if it is 2’b00:
-Then the case of(bcd[3:0]) first 4 bits each one represents a different value from 0000-9999.
-if it is 2’b01:
-Then the case of(bcd[7:4]) next 4 bits each one represents a different value from 0000-9999.
-if it is 2’b10: it represents a hundreds digit as  letter.
-if it is 2’b11: it represents thousands digit as letter.
+  => Logic for driving segments based on which digit is selected and the value of each digit
+  Here case(digit_select) 
+  if it is 2’b00:
+  Then the case of(bcd[3:0]) first 4 bits each one represents a different value from 0000-9999.
+  if it is 2’b01:
+  Then the case of(bcd[7:4]) next 4 bits each one represents a different value from 0000-9999.
+  if it is 2’b10: it represents a hundreds digit as  letter.
+  if it is 2’b11: it represents thousands digit as letter.
 
 7) statedetect
 
@@ -63,7 +63,7 @@ A module of state detect to hold the value as high when push button is pressed.
 Inputs are result_start,result_stop,clk_50MHz which are after passing through the debouncer circuit, and output is state of type reg.
 At every posedge clk, if result_start then state is else if result_stop then state is 1
 
-9) top
+8) top
 A module where all the inputs and outputs are declared from all other files. 
 Here wires are used for connecting inner modules.
 
