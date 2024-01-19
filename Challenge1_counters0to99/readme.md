@@ -9,7 +9,7 @@ https://github.com/muneeb-mbytes/edge_spartan6/issues/1#issuecomment-1496786165
 https://github.com/muneeb-mbytes/edge_spartan6/issues/1#issuecomment-1496790609
 
 
-
+Explaination of 
 
     1. bintobcd
 A module to convert binary numbers to BCD numbers using a “double dabble algorithm”.
