@@ -68,7 +68,7 @@ Inputs are result_start,result_stop,clk_50MHz which are after passing through th
 At every posedge clk, if result_start then state is else if result_stop then state is 1
 
     7. top
-A module where all the inputs and outputs are declared from all other files.
+A module where all the inputs and outputs are declared from all other files. 
 Here wires are used for connecting inner modules.
 
 
