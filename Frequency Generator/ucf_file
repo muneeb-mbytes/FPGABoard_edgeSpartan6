@@ -1,0 +1,7 @@
+NET "buzz1" LOC = p44;
+NET "buzz2" LOC = p41;
+NET "buzz3" LOC = p40;
+NET "buzz4" LOC = p45;
+NET "reset" LOC = p43;
+NET "clk_50MHz" LOC = p84;
+NET "buzzer" LOC = p85;
