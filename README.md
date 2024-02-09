@@ -1,5 +1,7 @@
 Welcome to edgeSpartan6 repo!
+
 This readme will guide you on Spartan 6 FPGA Board and some simple projects
+
 # User Manual 
 https://github.com/muneeb-mbytes/FPGABoard_edgeSpartan6/wiki/UCF
 https://allaboutfpga.com/edge-spartan6-fpga-development-board-user-manual/
