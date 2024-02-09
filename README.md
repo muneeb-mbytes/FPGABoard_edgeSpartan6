@@ -1,4 +1,4 @@
-Introducing the Edge Spartan 6 Board, the electrifying powerhouse that's here to revolutionize your projects and ignite your passion for innovation like never before! 🚀
+Introducing the <b>Edge Spartan 6 Board</b>, the electrifying powerhouse that's here to revolutionize your projects and ignite your passion for innovation like never before! 🚀
 
 Imagine diving into a world where your wildest ideas come to life with lightning-fast speed and unparalleled performance. That's exactly what the Edge Spartan 6 Board offers – a gateway to limitless creativity and boundless possibilities.
 
