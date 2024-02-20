@@ -23,7 +23,7 @@ module clk_261_63Hzgen(
     input reset,
     output clk_261Hz
     );
-    reg [25:0] ctr_reg = 0;                 // 26 bits to cover 25000000
+    reg [25:0] ctr_reg = 0;                 
     reg clk_out_reg = 0;
     
     always @(posedge clk_50MHz or posedge reset)
@@ -32,7 +32,7 @@ module clk_261_63Hzgen(
             clk_out_reg <= 0;
         end
  else
-            if(ctr_reg == 95554) begin  // 50MHz / 1Hz / 2 = 25,000,000
+            if(ctr_reg == 95554) begin  
                 ctr_reg <= 0;
                 clk_out_reg <= ~clk_out_reg;
             end
